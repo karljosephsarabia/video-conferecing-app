@@ -1,13 +1,13 @@
+"use client"
 import MeetingStreamCall from "@/components/meetingStreamCall";
-import { FC } from "react";
+import { useParams } from "next/navigation";
 
+type IdType = {
+  id: string;
+};
 
-interface MeetingProps {
-  params: { id: string; };
-}
-
-const Meeting: FC<MeetingProps> = async ({ params }) => {
-  const { id } = params;
+const Meeting = () => {
+  const { id }: IdType = useParams();
 
   return (
     <MeetingStreamCall id={id} />

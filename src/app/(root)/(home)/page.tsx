@@ -1,11 +1,13 @@
-import React from 'react'
+import HeroBanner from "@/components/heroBanner";
+import MeetingTypeList from "@/components/meetingTypeList";
 
 const Home = () => {
   return (
     <section className='flex size-full flex-col gap-10 text-white'>
-      <h1 className='text-3xl font-bold'>Home</h1>
+      <HeroBanner />
+      <MeetingTypeList />
     </section>
-  )
-}
+  );
+};
 
 export default Home;

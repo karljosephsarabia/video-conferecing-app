@@ -1,8 +1,22 @@
+import { Metadata } from 'next';
+import StreamVideoProvider from '../../../providers/StreamClientProvider';
 import React from 'react';
 
-const Rootlayout = ({ children }: { children: React.ReactNode; }) => {
+export const metadata: Metadata = {
+    title: 'KAZOOM',
+    description: 'Video calling app',
+    icons: {
+        icon: '/icons/logo.svg'
+    }
+};
+
+const Rootlayout = ({ children }: Readonly<{ children: React.ReactNode; }>) => {
     return (
-        <main>{children}</main>
+        <main>
+            <StreamVideoProvider>
+                {children}
+            </StreamVideoProvider >
+        </main>
     );
 };
 

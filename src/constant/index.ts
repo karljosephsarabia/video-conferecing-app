@@ -16,7 +16,7 @@ export const sidebarLinks = [
     },
     {
         name: 'Recordings',
-        route: '/recording',
+        route: '/recordings',
         imgUrl: '/icons/recording.svg'
     },
     {
@@ -24,4 +24,12 @@ export const sidebarLinks = [
         route: '/personal-room',
         imgUrl: '/icons/plus.svg'
     },
+]
+
+export const avatarImages = [
+    '/images/avatar-1.jpeg',
+    '/images/avatar-2.jpeg',
+    '/images/avatar-3.png',
+    '/images/avatar-4.png',
+    '/images/avatar-5.png',
 ]

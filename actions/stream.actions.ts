@@ -14,11 +14,11 @@ export const tokenProvider = async () => {
 
     const client = new StreamClient(apiKey, apiSecret);
 
-    const exp = Math.round(new Date().getTime() / 1000) + 60 * 60;
+    const tokenIssued = Math.floor(Date.now() / 1000) - 10;
 
-    const tokenIssued = Math.floor(Date.now() / 1000) - 60;
-
-    const token = client.generateUserToken({user_id: user.id, validity_in_seconds: exp, issued: tokenIssued});
+    const exp = Math.floor(Date.now() / 1000) + 3600;
+   
+    const token = client.generateUserToken({ user_id: user.id, validity_in_seconds: exp, iat: tokenIssued });
 
     return token;
 };

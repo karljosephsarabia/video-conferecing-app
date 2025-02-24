@@ -1,6 +1,15 @@
 import Navbar from '@/components/navbar';
 import Sidebar from '@/components/sidebar';
 import React from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'KAZOOM',
+    description: 'Video calling app',
+    icons: {
+        icon: '/icons/logo.svg'
+    }
+};
 
 const Homelayout = ({ children }: { children: React.ReactNode; }) => {
     return (

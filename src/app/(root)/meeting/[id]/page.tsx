@@ -11,7 +11,7 @@ import Alert from '@/components/alert';
 
 
 const Meeting = () => {
-  const { id } = useParams();
+  const { id } = useParams() ?? { id: '' };
   const { user, isLoaded } = useUser();
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   const { call, isCallLoading } = useGetCallById(id as string);

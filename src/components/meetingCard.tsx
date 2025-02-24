@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 import { Button } from './ui/button';
-import { avatarImages } from '@/constant';
 
 interface MeetingCardProps {
     title: string;

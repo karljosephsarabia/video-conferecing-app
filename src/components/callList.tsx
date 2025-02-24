@@ -55,6 +55,7 @@ function CallList({ type }: { type: 'ended' | 'upcoming' | 'recordings'; }) {
                 setRecordings(recordings);
 
             } catch (err) {
+                console.log(err);
                 toast({ title: 'Try again Later' });
             }
         };

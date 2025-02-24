@@ -1,7 +1,12 @@
 import MeetingStreamCall from "@/components/meetingStreamCall";
+import { FC } from "react";
 
 
-const Meeting = async ({ params }: { params: { id: string; }; }) => {
+interface MeetingProps {
+  params: { id: string; };
+}
+
+const Meeting: FC<MeetingProps> = async ({ params }) => {
   const { id } = params;
 
   return (

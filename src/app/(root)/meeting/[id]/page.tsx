@@ -1,7 +1,7 @@
 import MeetingStreamCall from "@/components/meetingStreamCall";
 
 
-const Meeting = ({ params }: { params: { id: string; }; }) => {
+const Meeting = async ({ params }: { params: { id: string; }; }) => {
   const { id } = params;
 
   return (
